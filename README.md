@@ -100,7 +100,7 @@
  30. Potência sem usar o operador: Construa um programa que leia dois
  números, base e expoente, e calcule a potência utilizando laços de
  repetição ao invés do operador de potência.
-
+</details>
 <details>
   <summary><strong>Vetores e Matrizes:</strong></summary>
 
@@ -139,3 +139,5 @@
  vetor de 10 elementos e troque o valor do primeiro pelo último, o
  segundo pelo penúltimo, e assim por diante.
 </details>
+
+
