@@ -1,6 +1,6 @@
-## Lista 01 - Exercícios de Revisão
+## Lista 01 - Exercícios de revisão em algoritmos com Java
 <details>
-  <summary> <h2>Estrutura Sequencial:</h2></summary>
+  <summary> <strong>Estrutura Sequencial:</strong></summary>
   
   1. Soma de dois números: Faça um programa que leia dois números e
  exiba a soma entre eles.
@@ -29,7 +29,7 @@
 </details>
 
 <details>
-  <summary><h2>Estrutura Condicional:</h2></summary>
+  <summary><strong>Estrutura Condicional:</strong></summary>
 
  11. Número par ou ímpar: Faça um programa que leia um número e
  diga se ele é par ou ímpar.
@@ -66,7 +66,7 @@
 </details>
  
 <details>
-  <summary><h2>Estrutura de Repetição:</h2></summary>
+  <summary><strong>Estrutura de Repetição:</strong></summary>
 
  21. Tabuada: Faça um programa que exiba a tabuada de um número
  fornecido pelo usuário.
@@ -99,11 +99,10 @@
  
  30. Potência sem usar o operador: Construa um programa que leia dois
  números, base e expoente, e calcule a potência utilizando laços de
- repetição ao invés do operador de potência
-
+ repetição ao invés do operador de potência.
 
 <details>
-  <summary><h2>Vetores e Matrizes:</h2></summary>
+  <summary><strong>Vetores e Matrizes:</strong></summary>
 
  31. Soma de elementos de um vetor: Faça um programa que leia 10
  números e armazene em um vetor. Depois, exiba a soma dos
@@ -114,7 +113,7 @@
  menor número.
  
  33. Média dos elementos de um vetor: Escreva um programa que leia
- umvetor de 20 números e calcule a média dos elementos.
+ um vetor de 20 números e calcule a média dos elementos.
  
  34. Contagem de números pares em um vetor: Faça um programa que
  leia um vetor de 30 números e exiba quantos números são pares.
@@ -140,4 +139,3 @@
  vetor de 10 elementos e troque o valor do primeiro pelo último, o
  segundo pelo penúltimo, e assim por diante.
 </details>
-
