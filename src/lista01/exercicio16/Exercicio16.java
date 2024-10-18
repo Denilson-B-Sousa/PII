@@ -4,23 +4,21 @@ import java.util.Scanner;
 
 public class Exercicio16 {
     public static void main(String[] args) {
-
         Scanner scanner = new Scanner(System.in);
-        int februaryDays;
 
-        System.out.println("Entre com quantidade de dias do mês de fevereiro: ");
-        februaryDays = scanner.nextInt();
+        System.out.print("Digite um ano: ");
+        int ano = scanner.nextInt();
 
-        if(februaryDays == 29) {
-            System.out.println("Ano bissexto.");
+        if (ehBissexto(ano)) {
+            System.out.println(ano + " é um ano bissexto.");
         } else {
-            System.out.println("O ano não é bissexto.");
+            System.out.println(ano + " não é um ano bissexto.");
         }
 
+        scanner.close();
+    }
+
+    public static boolean ehBissexto(int ano) {
+        return (ano % 4 == 0 && ano % 100 != 0) || (ano % 400 == 0);
     }
 }
-
-/*
-16.Ano bissexto: Construa um programa que determine se um ano é
-bissexto ou não
-*/

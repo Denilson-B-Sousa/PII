@@ -13,6 +13,7 @@ public class Exercicio31 {
         System.out.println("Entre com dez números inteiros ou decimais: ");
 
         for(int i = 0; i < numbers.length; i++) {
+            System.out.print("Vetor[ " + (i + 1) + " ] = ");
             numbers[i] = scanner.nextDouble();
 
             sum += numbers[i];

@@ -12,7 +12,8 @@ public class Exercicio36 {
 
         System.out.println("Preencha os valores da matriz: ");
         for(int i = 0; i < matriz.length; i++){
-            for(int j = 0; j < matriz[i].length; j++){
+            for(int j = 0; j < matriz.length; j++){
+                System.out.println("Matriz [ " + (i + 1) + " ] [ " + (j + 1)  + " ] =");
                 matriz[i][j] = scanner.nextInt();
                 sum += matriz[i][j];
             }
