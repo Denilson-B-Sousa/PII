@@ -1,8 +1,8 @@
-package aula01;
+package concepts.function;
 
 import java.util.Scanner;
 
-public class Recursividade {
+public class Sum {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
