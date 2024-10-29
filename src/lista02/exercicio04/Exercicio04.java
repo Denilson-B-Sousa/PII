@@ -9,18 +9,16 @@ public class Exercicio04 {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Entre com o primeiro número: ");
-        int numberOne = scanner.nextInt();
+        int firstNumber = scanner.nextInt();
 
         System.out.println("Entre com o segundo número: ");
-        int numberTwo = scanner.nextInt();
+        int secondNumber = scanner.nextInt();
 
-        System.out.println("O maior número é: " + maiorNumero(numberOne, numberTwo));
+        System.out.println("\n O maior número é: " + largestNumber(firstNumber, secondNumber));
     }
 
-    public static int maiorNumero(int numberOne, int numberTwo) {
+    public static int largestNumber(int firstNumber, int secondNumber) {
 
-        int largestNumber = (numberOne > numberTwo) ? numberOne : numberTwo;
-
-        return largestNumber;
+        return Math.max(firstNumber, secondNumber);
     }
 }

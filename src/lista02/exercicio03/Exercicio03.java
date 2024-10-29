@@ -11,11 +11,11 @@ public class Exercicio03 {
         System.out.println("Entre com um número inteiro: ");
         int number = scanner.nextInt();
 
-        System.out.println("Fatorial igual: " + Fatorial(number));
+        System.out.println("Fatorial igual: " + Factorial(number));
 
     }
 
-    public static int Fatorial(int number) {
+    public static int Factorial(int number) {
 
         int factorial = 1;
 

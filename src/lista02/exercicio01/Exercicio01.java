@@ -7,15 +7,15 @@ public class Exercicio01 {
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("Entre com o primeiro número: ");
-        int numberOne = scanner.nextInt();
+        int firstNumber = scanner.nextInt();
         System.out.println("Entre com o segundo número:  ");
-        int numberTwo = scanner.nextInt();
+        int secondNumber = scanner.nextInt();
 
-        System.out.println("Soma igual a: " + sum(numberOne, numberTwo));
+        System.out.println("Soma igual a: " + sum(firstNumber, secondNumber));
 
     }
 
-    static int sum(int a, int b) {
-        return a + b;
+    static int sum(int firstNumber, int secondNumber) {
+        return firstNumber + secondNumber;
     }
 }

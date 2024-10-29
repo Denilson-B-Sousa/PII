@@ -17,6 +17,9 @@ public class Exercicio22 {
         }
 
         // Verifica se o char inicial é diferente do char final
+        // radar -> r == r
+        // ada -> a == a
+        // d <= 1 return é palíndromo
         if(string.charAt(0) != string.charAt(string.length() - 1)) {
             return "Não é palíndromo";
         }

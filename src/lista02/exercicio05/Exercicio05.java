@@ -11,7 +11,7 @@ public class Exercicio05 {
         System.out.println("Entre com um número inteiro: ");
         int number = scanner.nextInt();
 
-        System.out.println(IsPrime(number));
+        System.out.println("\n" + IsPrime(number));
     }
 
     public static boolean IsPrime(int number) {
@@ -21,10 +21,10 @@ public class Exercicio05 {
            isPrime = false;
         } else {
             for(int i = 2; i <= Math.sqrt(number); i++) {
-                if(number % 2 == 0) {
+                if (number % 2 == 0) {
                     isPrime = false;
+                    break;
                 }
-                break;
             }
         }
 

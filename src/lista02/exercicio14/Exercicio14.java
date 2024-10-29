@@ -7,21 +7,22 @@ public class Exercicio14 {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
+        int number;
 
         System.out.println("Entre com um número inteiro: ");
-        int num = scanner.nextInt();
+        number = scanner.nextInt();
 
-        System.out.println("Fatorial do número: " + fatorial(num));
+        System.out.println("Fatorial do número: " + factorial(number));
 
     }
 
-    public static int fatorial(int num) {
+    public static int factorial(int number) {
 
-        if(num == 0 || num == 1) {
+        if(number == 0 || number == 1) {
             return 1;
         }
 
-        return num * fatorial(num-1);
+        return number * factorial(number - 1);
 
 
     }

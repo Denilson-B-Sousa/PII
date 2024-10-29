@@ -7,20 +7,17 @@ public class Exercicio10 {
 
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Entre com o texto para ser invertido: ");
-        String text = scanner.nextLine();
+        String text;
 
-        System.out.println("Texto invertido: " + inverterString(text));
+        System.out.println("Entre com o texto para ser invertido: ");
+        text = scanner.nextLine();
+
+        System.out.println("\nTexto invertido: " + inverterString(text));
     }
 
     public static String inverterString(String string) {
 
-        String inverseString = "";
+        return new StringBuilder(string).reverse().toString();
 
-        for(int i = string.length() - 1; i >= 0; i--) {
-            inverseString += string.charAt(i);
-        }
-
-        return inverseString;
     }
 }

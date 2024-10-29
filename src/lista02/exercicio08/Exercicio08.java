@@ -7,11 +7,18 @@ public class Exercicio08 {
 
         Scanner scanner = new Scanner(System.in);
 
+        double radius;
+        double circleArea;
+        String measureUnit;
+
         System.out.println("Entre com o raio do círculo: ");
-        double raio = scanner.nextInt();
+        radius = Double.parseDouble(scanner.nextLine());
 
-        double areaCircle = Math.PI * (Math.pow(raio, 2));
+        System.out.println("Entre com a unidade de medida utilizada: ");
+        measureUnit = scanner.nextLine();
 
-        System.out.println("Área do círculo: " + String.format("%.1f" + areaCircle));
+        circleArea = Math.PI * (Math.pow(radius, 2));
+
+        System.out.println("Área do círculo: " + String.format("%.1f", circleArea) + " " + measureUnit + "²");
     }
 }

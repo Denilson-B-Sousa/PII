@@ -11,15 +11,19 @@ public class Exercicio18 {
         double base = scanner.nextDouble();
 
         System.out.println("Entre com o expoente da potência: ");
-        double expoente = scanner.nextDouble();
+        double exponent = scanner.nextDouble();
 
-        System.out.println("Potência " + String.format("%.0f", base) + " ^ " + String.format("%.0f" , expoente) + " = " + String.format("%.0f" , CalcularPotencia(base, expoente)));
+        System.out.println("Potência " + String.format("%.0f", base) + " ^ " + String.format("%.0f" , exponent) + " = " + String.format("%.0f" , calculatePow(base, exponent)));
 
     }
 
-    public static double CalcularPotencia(double base, double expoente) {
+    public static double calculatePow(double base, double exponent) {
 
-        return Math.pow(base, expoente);
+        if(exponent == 0) {
+            return 1;
+        }
+
+        return base * calculatePow(base, exponent - 1);
 
     }
 }

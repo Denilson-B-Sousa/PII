@@ -4,28 +4,28 @@ import java.util.Scanner;
 
 public class Exercicio06 {
     public static void main(String[] args) {
-        int numberOne;
-        int numberTwo;
-        int numberThree;
+        int firstNumber;
+        int secondNumber;
+        int thirdNumber;
 
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Entre com o valor do primeiro número: ");
-        numberOne = scanner.nextInt();
+        firstNumber = scanner.nextInt();
 
         System.out.println("Entre com o valor do segundo número: ");
-        numberTwo = scanner.nextInt();
+        secondNumber = scanner.nextInt();
 
         System.out.println("Entre com o valor do terceiro número: ");
-        numberThree = scanner.nextInt();
+        thirdNumber = scanner.nextInt();
 
-        System.out.println("\nMédia: " + CalcularMedia(numberOne, numberTwo, numberThree));
+        System.out.println("\nMédia: " + CalculateAverage(firstNumber, secondNumber, thirdNumber));
 
     }
 
-    public static double CalcularMedia(int numberOne, int numberTwo, int numberThree) {
+    public static double CalculateAverage(int firstNumber, int secondNumber, int thirdNumber) {
 
-        return (numberOne + numberTwo + numberThree) / 3;
+        return (double) (firstNumber + secondNumber + thirdNumber) / 3;
     }
 
 

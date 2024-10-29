@@ -12,11 +12,11 @@ public class Exercicio02 {
         number = scanner.nextInt();
 
 
-        System.out.println(VerificarPar(number));
+        System.out.println(checkPair(number));
 
     }
 
-    public static boolean VerificarPar(int number) {
+    public static boolean checkPair(int number) {
 
         return (number % 2 == 0);
 
