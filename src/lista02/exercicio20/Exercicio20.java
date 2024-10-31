@@ -20,10 +20,7 @@ public class Exercicio20 {
 
     public static double calcularMDC(int a, int b) {
 
-        if (b == 0) {
-            return a;
-        } else {
-            return calcularMDC(b, a % b);
-        }
+        return (b == 0) ? a : calcularMDC(b, a % b);
+
     }
 }

@@ -19,11 +19,7 @@ public class Exercicio16 {
 
     public static int add(int n) {
 
-        if(n == 1) {
-            return 1;
-        } else {
-            return n + add(n - 1);
-        }
+        return (n == 1) ? 1 : n + add(n - 1);
 
     }
 }

@@ -9,13 +9,8 @@ public class Exercicio17 {
 
     public static int countDigits(int n) {
 
-        // números menores que 10 possui apenas 1 dígito
-        if (n < 10) {
-            return 1;
-        }
+        return (n < 10) ?  1 : 1 + countDigits(n / 10);
 
-        // Passo recursivo: remove um dígito e chama a função novamente
-        return 1 + countDigits(n / 10);
     }
 
 }

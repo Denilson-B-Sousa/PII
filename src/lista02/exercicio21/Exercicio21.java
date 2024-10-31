@@ -9,11 +9,9 @@ public class Exercicio21 {
 
     public static int recursivitySum(int[] array, int index) {
         // Caso base: se o índice for igual ao comprimento do vetor, retorne 0
-        if (index == array.length) {
-            return 0;
-        }
+
         // Passo recursivo: soma o elemento atual com o somatório do restante do vetor
-        return array[index] + recursivitySum(array, index + 1);
+        return (index == array.length) ? 0 : array[index] + recursivitySum(array, index + 1);
     }
 
 }

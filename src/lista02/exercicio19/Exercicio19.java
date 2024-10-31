@@ -15,10 +15,6 @@ public class Exercicio19 {
 
     public static String invertedText(String text) {
 
-        if(text.isEmpty()) {
-            return text;
-        }
-
-        return invertedText(text.substring(1)) + text.charAt(0);
+        return text.isEmpty() ? text : invertedText(text.substring(1)) + text.charAt(0);
     }
 }

@@ -19,11 +19,7 @@ public class Exercicio18 {
 
     public static double calculatePow(double base, double exponent) {
 
-        if(exponent == 0) {
-            return 1;
-        }
-
-        return base * calculatePow(base, exponent - 1);
+        return (exponent == 0) ? 1 : base * calculatePow(base, exponent - 1);
 
     }
 }
