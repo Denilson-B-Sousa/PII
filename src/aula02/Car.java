@@ -1,58 +1,65 @@
 package aula02;
 
-import java.math.BigDecimal;
-import java.util.Date;
-
 public class Car {
 
-    public String cor;
-    public Date anoLancamento;
+    // Características do carro
     public String marca;
     public String modelo;
-    public BigDecimal preco;
-    public Double litrosCombustivel;
-    public String placa;
-    public Integer porta;
-    public Integer roda;
+    public int ano;
+    public String cor;
+    public double quilometragem;
+    public double tanque;
+    public final double capacidadeTanque;
+    public final double consumo; // km/L
 
-    // Objetivo do construtor é criar um objeto
-
-    public Car(String cor, Date anoLancamento, String marca, String modelo, BigDecimal preco,
-               Double litrosCombustivel, String placa, Integer porta, Integer roda) {
-        this.cor = cor;
-        this.anoLancamento = anoLancamento;
+    public Car(String marca, String modelo, int ano, String cor, double capacidadeTanque, double consumo) {
         this.marca = marca;
         this.modelo = modelo;
-        this.preco = preco;
-        this.litrosCombustivel = litrosCombustivel;
-        this.placa = placa;
-        this.porta = porta;
-        this.roda = roda;
+        this.ano = ano;
+        this.cor = cor;
+        this.capacidadeTanque = capacidadeTanque;
+        this.consumo = consumo;
+        this.quilometragem = 0;
+        this.tanque = 0;
     }
 
-    public Car() {
+    // Comportamentos do carro
 
+    public void acelerar(int quantidade) {
+        System.out.println("O carro acelerou " + quantidade + " km/h.");
     }
 
-    // Métodos utilizado para implementar o comportamento do objeto
-
-    public double combustivelDisponivel() {
-        return 48.5;
+    public void frear() {
+        System.out.println("O carro está parando.");
     }
 
-    public boolean percorrer() {
-       if(this.litrosCombustivel > 0) {
-           this.litrosCombustivel--;
-           return true;
-       };
-
-       return false;
+    public void abastecer(double litros) {
+        if (tanque + litros > capacidadeTanque) {
+            tanque = capacidadeTanque;
+            System.out.println("Tanque cheio. Litros adicionais foram descartados.");
+        } else {
+            tanque += litros;
+            System.out.println("Carro abastecido com " + litros + " litros.");
+        }
     }
 
+    public void dirigir(double distancia) {
+        double combustivelNecessario = distancia / consumo;
+        if (combustivelNecessario <= tanque) {
+            quilometragem += distancia;
+            tanque -= combustivelNecessario;
+            System.out.println("Dirigiu " + distancia + " km. Quilometragem atual: " + quilometragem + " km.");
+        } else {
+            System.out.println("Combustível insuficiente para essa distância.");
+        }
+    }
 
+    public void exibirInformacoes() {
+        System.out.println("\nMarca: " + marca);
+        System.out.println("Modelo: " + modelo);
+        System.out.println("Ano: " + ano);
+        System.out.println("Cor: " + cor);
+        System.out.println("Quilometragem: " + quilometragem + " km");
+        System.out.println("Combustível no tanque: " + tanque + " litros");
+    }
 }
-// Sempre nos exercícios (Sempre Utilizar Objetos)
-// Padrão de projeto builder
-// Classes são organizadas dentro de pacotes
-// Propriedades, atributos e características
-// Em POO toda função é um método
