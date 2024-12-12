@@ -57,17 +57,20 @@ public class Produto {
     }
 
     public void exibirInformacoes() {
-        System.out.println("Nome produto: " + getNome());
+        System.out.println("\nNome produto: " + getNome());
         System.out.println("Preço produto: " + currency.currencyFormatter(BigDecimal.valueOf(getPreco())));
         System.out.println("Data validade: " + getDataValidade());
         System.out.println("Código de Barras: " + getCodigoDeBarras());
         System.out.println("Quantidade de produtos em estoque: " + getQuantidadeEmEstoque() + " unidades.");
+        System.out.println("Valor total em estoque: " + valorTotalEmEstoque());
     }
 
-    public Double aplicarDesconto(Double valorDesconto) {
-        this.preco = this.preco - valorDesconto;
+    public void aplicarDesconto(Double porcentagemDesconto) {
 
-        return this.preco;
+
+        Double valorDesconto = this.preco * porcentagemDesconto / 100;
+
+        this.preco = this.preco - valorDesconto;
     }
 
     public String getNome() {

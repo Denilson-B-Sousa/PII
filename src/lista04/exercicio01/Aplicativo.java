@@ -7,8 +7,6 @@ import java.time.LocalDate;
 public class Aplicativo {
     public static void main(String[] args) {
 
-        MoneyFormatter currencyFormatter = new MoneyFormatter();
-
         Produto produto1 = new Produto(
                 "Arroz Integral",
                 15.99,
@@ -25,17 +23,18 @@ public class Aplicativo {
                 100
         );
 
-        Produto produto3 = new Produto(
-                "Azeite de Oliva",
-                29.99,
-                LocalDate.of(2024, 12, 30),
-                "1112233445566",
-                30
-        );
 
         produto1.verificarValidade();
-
+        produto1.atualizarEstoque(20);
+        produto1.aplicarDesconto(10.0);
         produto1.exibirInformacoes();
+
+
+        produto2.aplicarDesconto(5.0);
+        produto2.exibirInformacoes();
+        produto2.verificarValidade();
+        produto2.atualizarEstoque(10);
+
 
     }
 }
