@@ -24,7 +24,6 @@ public class Car {
     }
 
     // Comportamentos do carro
-
     public void acelerar(int quantidade) {
         System.out.println("O carro acelerou " + quantidade + " km/h.");
     }

@@ -7,7 +7,6 @@ public class Cliente {
     private String nome;
     private String cpf;
     private LocalDate dataNascimento;
-
     private ArrayList<ContaBancaria> conta;
 
     public Cliente(String nome, String cpf) {
@@ -20,6 +19,22 @@ public class Cliente {
         this.cpf = cpf;
         this.dataNascimento = dataNascimento;
         this.conta = conta;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public LocalDate getDataNascimento() {
+        return dataNascimento;
+    }
+
+    public ArrayList<ContaBancaria> getConta() {
+        return conta;
     }
 
     @Override

@@ -40,14 +40,27 @@ public class Carro {
         this.autonomia = autonomia;
     }
 
-    public Double acelerar() {
-        return this.velocidadeAtual++;
+    public void acelerar() {
+        if(velocidadeAtual < velocidadeMaxima) {
+            while(velocidadeAtual < velocidadeMaxima) {
+                velocidadeAtual++;
+                System.out.println("Acelerando o carro: " + String.format("%.0f", velocidadeAtual) + " Km");
+            }
+        } else {
+            System.out.println("Carro atingiu a velocidade máxima!");
+        }
+
     }
 
     public void frear() {
-        this.velocidadeAtual = 0.0;
-
-        System.out.println("Velocidade atual: " + this.velocidadeAtual + " Km");
+        if(velocidadeAtual > 0) {
+            while(velocidadeAtual > 0) {
+                velocidadeAtual--;
+                System.out.println("Freiando o carro: " + String.format("%.0f", velocidadeAtual) + " Km/h");
+            }
+        } else {
+            System.out.println("Carro parado");
+        }
     }
 
     public void trocarMarcha(Integer marchaAtual) {

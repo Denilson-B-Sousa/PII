@@ -38,13 +38,26 @@ public class Teste {
         );
 
         try {
-            carro1.setChassi("2T1BURHE0FC1234"); // Válido -> 2T1BURHE0FC123456
+            carro1.setChassi("2T1BURHE0FC123456"); // inválido -> 2T1BURHE0FC1234
             System.out.println(carro1.getChassi());
         } catch (Error error) {
             System.out.println(error.getMessage());
         }
 
         double distancia = 300.0;
+
+        carro1.acelerar();
+        carro2.acelerar();
+
+        carro1.frear();
+
+        carro1.trocarMarcha(2);
+        carro2.trocarMarcha(3);
+        carro1.reduzMarcha(5);
+        carro1.reduzMarcha(5);
+
+        carro1.exibirDados();
+        carro2.exibirDados();
 
         System.out.println("Combustível necessário para percorrer " + String.format("%.1f" , distancia) + "Km = " + String.format("%.2f", carro1.combustivelNecessario(400.0)) + " litros");
 

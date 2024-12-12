@@ -2,6 +2,7 @@ package lista04.exercicio01;
 
 import lista04.MoneyFormatter;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 
 public class Produto {
@@ -41,7 +42,7 @@ public class Produto {
 
         double valorTotal = this.preco * this.quantidadeEmEstoque;
 
-        return currency.formatter(valorTotal);
+        return currency.currencyFormatter(BigDecimal.valueOf(valorTotal));
     }
 
     protected Integer atualizarEstoque(Integer quantidadeAtual) {
@@ -57,7 +58,7 @@ public class Produto {
 
     public void exibirInformacoes() {
         System.out.println("Nome produto: " + getNome());
-        System.out.println("Preço produto: " + currency.formatter(getPreco()));
+        System.out.println("Preço produto: " + currency.currencyFormatter(BigDecimal.valueOf(getPreco())));
         System.out.println("Data validade: " + getDataValidade());
         System.out.println("Código de Barras: " + getCodigoDeBarras());
         System.out.println("Quantidade de produtos em estoque: " + getQuantidadeEmEstoque() + " unidades.");
