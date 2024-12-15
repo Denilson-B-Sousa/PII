@@ -16,18 +16,15 @@ public class Paciente {
         this.sexo = sexo;
     }
 
-    public void agendarConsulta() {
-
-
+    public String getNome() {
+        return nome;
     }
 
-    @Override
-    public String toString() {
-        return "Paciente{" +
-                "nome='" + nome + '\'' +
-                ", cpf='" + cpf + '\'' +
-                ", dataNascimento=" + dataNascimento +
-                ", sexo=" + sexo +
-                '}';
+    public LocalDate getDataNascimento() {
+        return dataNascimento;
+    }
+
+    public Character getSexo() {
+        return sexo;
     }
 }

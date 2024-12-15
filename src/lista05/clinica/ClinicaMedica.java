@@ -1,6 +1,7 @@
 package lista05.clinica;
 
 
+import lista05.clinica.dominio.Consulta;
 import lista05.clinica.dominio.Medico;
 
 import java.util.ArrayList;
@@ -21,10 +22,12 @@ public class ClinicaMedica {
     }
 
     public void exibirInformacoes() {
-        System.out.println("Nome: " + getNome());
-        System.out.println("Endereço: " + getEndereco());
-        medicos.forEach(System.out::println);
+        System.out.println("Clínica: " + getNome());
+        System.out.println(endereco.getRua() + ", " + endereco.getLogradouro());
+        System.out.println(endereco.getBairro() + " - " + endereco.getCidade() + "/" + endereco.getEstado());
+        System.out.println("CEP: " + endereco.getCep());
     }
+
 
     public String getNome() {
         return nome;

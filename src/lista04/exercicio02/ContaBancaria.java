@@ -1,12 +1,24 @@
 package lista04.exercicio02;
 
+import lista04.utils.MoneyFormatter;
+
 import java.math.BigDecimal;
 
 public class ContaBancaria {
     private String numero;
     private String agencia;
-    private String tipoConta;
+    public enum TipoConta {
+        POUPANCA,
+        CORRENTE,
+        SALARIO,
+        ESPECIAL
+    };
+
+    private TipoConta tipoConta = TipoConta.POUPANCA;
     private BigDecimal saldo;
+
+    MoneyFormatter currency = new MoneyFormatter();
+
 
     public void depositar(BigDecimal valor) {
 
@@ -23,15 +35,15 @@ public class ContaBancaria {
         this.saldo = this.saldo.subtract(valor);
     }
 
-    public BigDecimal exibirSaldo() {
-        return this.saldo;
+    public void exibirSaldo() {
+        System.out.println("Saldo em conta: " + currency.currencyFormatter(this.saldo));
     }
 
-    public ContaBancaria(String numero, String agencia, String tipoConta, BigDecimal saldo) {
+    public ContaBancaria(String numero, String agencia, BigDecimal saldo, TipoConta tipoConta) {
         this.numero = numero;
         this.agencia = agencia;
-        this.tipoConta = tipoConta;
         this.saldo = saldo;
+        this.tipoConta = tipoConta;
     }
 
     public String getNumero() {
@@ -42,7 +54,7 @@ public class ContaBancaria {
         return agencia;
     }
 
-    public String getTipoConta() {
+    public TipoConta getTipoConta() {
         return tipoConta;
     }
 
@@ -50,13 +62,4 @@ public class ContaBancaria {
         return saldo;
     }
 
-    @Override
-    public String toString() {
-        return "ContaBancaria{" +
-                "numero='" + numero + '\'' +
-                ", agencia='" + agencia + '\'' +
-                ", tipoConta='" + tipoConta + '\'' +
-                ", saldo=" + saldo +
-                '}';
-    }
 }

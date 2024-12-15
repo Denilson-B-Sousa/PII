@@ -7,7 +7,7 @@ public class ItemPedido {
     private Produto produto;
     private Integer quantidade;
 
-    public BigDecimal calcularValorTotal() {
+    public BigDecimal calcularSubtotal() {
         return produto.getPreco().multiply(BigDecimal.valueOf(quantidade));
     }
 

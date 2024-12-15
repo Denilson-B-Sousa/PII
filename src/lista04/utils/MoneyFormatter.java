@@ -1,4 +1,4 @@
-package lista04;
+package lista04.utils;
 
 import java.math.BigDecimal;
 import java.text.NumberFormat;
@@ -15,7 +15,6 @@ public class MoneyFormatter {
     }
 
     public String currencyFormatter(BigDecimal valor) {
-
         return this.currency.format(valor);
     }
 

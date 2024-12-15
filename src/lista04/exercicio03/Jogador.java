@@ -14,11 +14,6 @@ public class Jogador {
         return this.pontuacao = this.pontuacao / numeroJogadores;
     }
 
-    public String reiniciarJogo() {
-        this.pontuacao = 0;
-        return "Jogo reiniciado!";
-    }
-
     public Integer exibirPontuacao() {
         return this.pontuacao;
     }

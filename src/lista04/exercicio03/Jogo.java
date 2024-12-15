@@ -36,4 +36,19 @@ public class Jogo {
 
     }
 
+    public void exibirClassificacao() {
+        System.out.println("\nClassificação: ");
+        jogadores.stream()
+                .sorted(Comparator.comparingInt(Jogador::getPontuacao).reversed())
+                .forEach(jogador -> System.out.println(jogador.getNome() + ": " + jogador.getPontuacao()));
+    }
+
+    public void reiniciarJogo() {
+        jogadores.forEach(jogador -> jogador.setPontuacao(0));
+        System.out.println("\nJogo Reiniciado!");
+        jogadores.stream()
+                .sorted(Comparator.comparingInt(Jogador::getPontuacao).reversed())
+                .forEach(jogador -> System.out.println(jogador.getNome() + ": " + jogador.getPontuacao()));
+    }
+
 }

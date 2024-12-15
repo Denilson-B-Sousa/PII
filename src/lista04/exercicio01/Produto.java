@@ -1,6 +1,7 @@
 package lista04.exercicio01;
 
-import lista04.MoneyFormatter;
+import lista04.utils.DateFormatter;
+import lista04.utils.MoneyFormatter;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
@@ -13,6 +14,7 @@ public class Produto {
     private Integer quantidadeEmEstoque;
 
     MoneyFormatter currency = new MoneyFormatter();
+    DateFormatter dateFormatter = new DateFormatter("dd/MM/yyyy");
 
     public Produto(String nome, Double preco) {
         this.nome = nome;
@@ -27,14 +29,14 @@ public class Produto {
         this.quantidadeEmEstoque = quantidadeEmEstoque;
     }
 
-    public String verificarValidade() {
+    public void verificarValidade() {
 
         LocalDate dataAtual = LocalDate.now();
 
         if(this.dataValidade.isAfter(dataAtual)) {
-            return "Produto dentro da validade!";
+            System.out.println("Produto dentro da validade!");
         } else {
-            return "Produto está vencido";
+            System.out.println("Produto está vencido!");
         }
     }
 
@@ -45,11 +47,10 @@ public class Produto {
         return currency.currencyFormatter(BigDecimal.valueOf(valorTotal));
     }
 
-    protected Integer atualizarEstoque(Integer quantidadeAtual) {
+    protected void atualizarEstoque(Integer quantidadeAtual) {
 
         this.quantidadeEmEstoque = quantidadeAtual;
 
-        return quantidadeEmEstoque;
     }
 
     public Integer getQuantidadeEmEstoque() {
@@ -57,16 +58,16 @@ public class Produto {
     }
 
     public void exibirInformacoes() {
-        System.out.println("\nNome produto: " + getNome());
-        System.out.println("Preço produto: " + currency.currencyFormatter(BigDecimal.valueOf(getPreco())));
-        System.out.println("Data validade: " + getDataValidade());
+        System.out.println("\nNome do produto: " + getNome());
+        System.out.println("Preço do produto: " + currency.currencyFormatter(BigDecimal.valueOf(getPreco())));
+        System.out.println("Data de validade: " + dateFormatter.format(getDataValidade()));
         System.out.println("Código de Barras: " + getCodigoDeBarras());
         System.out.println("Quantidade de produtos em estoque: " + getQuantidadeEmEstoque() + " unidades.");
         System.out.println("Valor total em estoque: " + valorTotalEmEstoque());
+        verificarValidade();
     }
 
     public void aplicarDesconto(Double porcentagemDesconto) {
-
 
         Double valorDesconto = this.preco * porcentagemDesconto / 100;
 
